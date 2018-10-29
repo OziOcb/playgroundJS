@@ -60,10 +60,12 @@ She has one ear that is always s1ightly heigher than the other 11/10 wonky af'
 */
 
 function weRateDogs(str, rating){
-  //write code here
+  return str.replace(/[\d]/\/[\d]/, 'elo')
 }
 
 
 // TESTS
-console.log(weRateDogs('This is Tucker. He would like a hug. 3/10 someone hug him', 11)) // 'This is Tucker. He would like a hug. 11/10 someone hug him', 'Should return a string with updated rating');
-console.log(weRateDogs('This is Charlie. He pouts until he gets to go on the swing. 5/10 manipulative af.', 12)) // "This is Charlie. He pouts until he gets to go on the swing. 12/10 manipulative af.", 'Should return a string with updated rating');
+console.log(weRateDogs('This is Tucker. He would like a hug. 3/10 someone hug him', 11))
+// 'This is Tucker. He would like a hug. 11/10 someone hug him', 'Should return a string with updated rating');
+console.log(weRateDogs('This is Charlie. He pouts until he gets to go on the swing. 5/10 manipulative af.', 12))
+// "This is Charlie. He pouts until he gets to go on the swing. 12/10 manipulative af.", 'Should return a string with updated rating');
