@@ -99,14 +99,57 @@ and spaces ( ).
 
 */
 
+// ES5
+// function readZalgo(zalgotext) {
+//   var reg = /[\w\s\.\?!,]/g
+//   var mortaltext = zalgotext.match(reg).join('');
+//   return mortaltext;
+// }
 
-function readZalgo(zalgotext) {
-  var mortaltext = zalgotext;
-  return mortaltext;
-}
+// ES6
+// const readZalgo = zalgotext => zalgotext.match(/[\w\s\.\?!,]/g).join('')
+
+const readZalgo = txt => txt.replace(/[^\w,.!? ]/g, '')
+
 
 
 // TESTS
 console.log(readZalgo("H̗̪͇͓̙͎̣̄ͬa͚̯̦͉̖̥v͆ͩ̃͆̓̐ͥe̟͎͖͕͍̎ ̰͚̩̟͕̰͊̽̍ͯ̌͊ā̖̪͉͍̥͙̿ͩ̃ͅ ̬̥͎͑̿ͧg̰̳̺͔̦͉ͫ̀̐̓̐r̝̫̱̘̰͐͋ͯͭͭͭ͆e͙͕̖̗͙̰͌ͭä͓͚̝͓́̌͑ͪ͊ṱͥ ̱ͣd͎͔͎͇̫̪̘̃͐̇à͕̮̈͋ͪy̼̳̱ͮ!̳̥̰̭͇̔ͮ̽̓")) //  "Have a great day!"
+
+
+
+//──── 004 ───────────────────────────────────────────────────────────────────────────────
+/*
+
+Egg Talk.
+
+Insert an "egg" after each consonant.
+If there are no consonants, there will be no eggs.
+Argument will consist of a string with only alphabetic characters and possibly some spaces.
+
+eg:
+
+hello => heggeleggleggo
+
+eggs => egegggegg
+
+FUN KATA => FeggUNegg KeggATeggA
+
+////
+
+This Kata is designed for beginners to practice the basics of regular expressions.
+With this in mind a little bit of commenting in your solution could be very useful.
+
+Check Eloquent Javascript p176
+
+*/
+function heggeleggleggo(word){
+  //ceggodegge heggeregge
+}
+
+
+// TESTS
+console.log(heggeleggleggo("hello")) //"heggeleggleggo"
+console.log(heggeleggleggo("code here")) //"ceggodegge heggeregge"
 
 
