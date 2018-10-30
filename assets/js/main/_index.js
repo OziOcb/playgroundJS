@@ -1,4 +1,5 @@
 //──── 001 ──────────────────────────────────────────────────────────────────────────────────
+console.log('%c Kata 001 ', 'color: red');
 /*
 https://www.codewars.com/kata/chuck-norris-ii-one-punch/train/javascript
 
@@ -35,6 +36,7 @@ console.log(onePunch([])) // 'Brd Br Frind Lptop Monky'
 
 
 //──── 002 ──────────────────────────────────────────────────────────────────────────────────
+console.log('%c Kata 002 ', 'color: red');
 /*
 https://www.codewars.com/kata/theyre-good-dogs/train/javascript
 
@@ -78,6 +80,7 @@ console.log(weRateDogs('This is Charlie. He pouts until he gets to go on the swi
 
 
 //──── 003 ───────────────────────────────────────────────────────────────────────────────
+console.log('%c Kata 003 ', 'color: red');
 /*
 
 Zalgo text is text that leaks into our plane of existence from a corrupted dimension of Unicode. For example:
@@ -119,6 +122,7 @@ console.log(readZalgo("H̗̪͇͓̙͎̣̄ͬa͚̯̦͉̖̥v͆ͩ̃͆̓̐ͥe̟͎͖̎�
 
 
 //──── 004 ───────────────────────────────────────────────────────────────────────────────
+console.log('%c Kata 004 ', 'color: red');
 /*
 
 Egg Talk.
@@ -143,13 +147,32 @@ With this in mind a little bit of commenting in your solution could be very usef
 Check Eloquent Javascript p176
 
 */
-function heggeleggleggo(word){
-  //ceggodegge heggeregge
-}
+// ES5
+// function heggeleggleggo(word){
+//   var reg = /[bcdfghjklmnpqrstvxzwy]/i;
+//   var newWord = '';
+
+//   Array.from(word).forEach(function(letter){
+//     if (reg.test(letter)){
+//       newWord += letter + 'egg'
+//     } else {
+//       newWord += letter
+//     }
+//   })
+
+//   return newWord
+// }
+
+// ES6
+// const heggeleggleggo = word => [...word].map( letter => /[bcdfghjklmnpqrstvxzwy]/i.test(letter) ? `${letter}egg` : letter).join('')
+
+// Very short 
+let heggeleggleggo = w => w.replace(/[bcdfghjklmnpqrstvwxyz]/ig, "$&egg")
 
 
 // TESTS
 console.log(heggeleggleggo("hello")) //"heggeleggleggo"
 console.log(heggeleggleggo("code here")) //"ceggodegge heggeregge"
+console.log(heggeleggleggo("egg")) //"egegggegg"
 
 
