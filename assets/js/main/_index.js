@@ -205,11 +205,34 @@ imagine the beauty!
 
 */
 // ES5
-function headSmash(array) {
+// function headSmash(array) {
+//   var reg = /O/gm
+// }
 
+// ES6
+const headSmash = arr => {
+  const reg = /O/g
+  let newArr = ''
+
+  if (arr === '' || arr.length === 0){
+    newArr = "Gym is empty"
+  } else if (typeof arr === "number"){
+    newArr = "This isn't the gym!!"
+  } else {
+    newArr = arr.map(str => str.replace(reg, ' '));
+  }
+
+  return newArr
 }
 
+
+
+
 // TESTS
+console.log(headSmash('')) // 'This isn\'t the gym!!');
+console.log(headSmash([])) // 'This isn\'t the gym!!');
+console.log(headSmash(8764646)) // 'This isn\'t the gym!!');
+
 console.log(headSmash(
 [
 '*****************************************',
@@ -247,4 +270,5 @@ console.log(headSmash(
 '****************************************']))
 
 
-console.log(headSmash(8764646)) // 'This isn\'t the gym!!');
+
+
